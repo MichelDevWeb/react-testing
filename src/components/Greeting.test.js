@@ -38,4 +38,17 @@ describe("Greeting component", () => {
     const outputElement = screen.getByText("Changed!");
     expect(outputElement).toBeInTheDocument();
   });
+
+  test('does not render "tell me something" if the button was clicked', () => {
+    // Arrange
+    render(<Greeting />)
+
+    // Act
+    const buttonElement = screen.getByRole('button')
+    userEvent.click(buttonElement)
+
+    // Assert
+    const outputElement = screen.queryByText('tell me something', {exact: false})
+    expect(outputElement).toBeNull();
+  })
 });
