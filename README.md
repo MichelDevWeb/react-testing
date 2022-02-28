@@ -61,3 +61,7 @@ window.fetch.mockResolvedValueOnce({
   json: async () => [{ id: "p1", title: "First post" }],
 });
 ```
+LINK:
+- https://jestjs.io/docs/getting-started
+- https://testing-library.com/docs/react-testing-library/intro/
+- https://github.com/testing-library/react-hooks-testing-library
